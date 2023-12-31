@@ -38,10 +38,13 @@ class eventManager {
   
     eventEmit(signal, arg = []) {
       const values = this.signals[signal];
-      for (const fcn of values) {
-        fcn(arg);
-        console.log(fcn, " was emitted");
+      const results = []
+      if (!(values.length === 0)){
+        values.forEach(func => {
+          results.push(func(arg));
+        });
       }
+      return results
     }
   
     signalIsDefined(signal) {
