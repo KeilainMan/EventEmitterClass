@@ -54,3 +54,10 @@ Working EventEmitter Class in JS. Improved on Trial1 using own knowledge, ChatGP
 Not all Constraints are fulfilled.
 
 Signals/Events are stored in a Map. The subscription method returns an Object to unsubscribe. Two functions reduced compared to Trial1.
+
+### Trial3
+
+Working EventEmitter Class in JS. Improved on Trial2 using ChatGPT to learn about JS and for syntax correction.
+All constraints should be fulfilled as far as I understand. 
+
+Signals/Events are stored in a Map. There are only two methods left. EventSubscribe return an object to unsubscribe
