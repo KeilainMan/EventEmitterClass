@@ -8,12 +8,13 @@ const subscription2 = manager.eventSubscribe("eventHappened", onEventHappened3)
 
 
 
-const m = manager.eventEmit("eventHappened", 3)
-console.log(m)
+const result = manager.eventEmit("eventHappened", 3)
+console.log(result)
 subscription(onEventHappened)
 
+
 function onEventHappened(number){
-    console.log("Event happened!:", number);
+    console.log("Event1 happened!:", number);
     return 1
 }
 
