@@ -6,26 +6,26 @@ Design of an EventEmitterClass with the following constraints:
 
 1. subscribe - This method takes two arguments: the name of an event as a string and a callback function. The callback function will be called when the event is emitted. An event should support multiple listeners. When emitting an event with multiple callbacks, each should be called in the order in which they were subscribed. The subscribe method should return an object with an `unsubscribe` method. Calling `unsubscribe` should remove the callback from the list of subscriptions.
 
-        ```javascript
-        const eventEmitter = new EventEmitter();
-        const subscription = eventEmitter.subscribe('eventName', (arg1, arg2) => {
-            // Callback logic here
-        });
+   ```js
+   const eventEmitter = new EventEmitter();
+   const subscription = eventEmitter.subscribe('eventName', (arg1, arg2) => {
+           // Callback logic here
+   });
 
-        // To unsubscribe:
-        subscription.unsubscribe();
-        ```
+   // To unsubscribe:
+   subscription.unsubscribe();
+   ```
 
 2. emit - This method takes two arguments: the name of an event as a string and an optional array of arguments that will be passed to the callback(s). If there are no callbacks subscribed to the given event, return an empty array. Otherwise, return an array containing the results of all callback calls in the order they were subscribed.
 
-        ```javascript
-        const eventEmitter = new EventEmitter();
-        eventEmitter.subscribe('eventName', (arg1, arg2) => {
-         // Callback logic here
-        });
+   ```javascript
+   const eventEmitter = new EventEmitter();
+   eventEmitter.subscribe('eventName', (arg1, arg2) => {
+    // Callback logic here
+   });
 
-        const results = eventEmitter.emit('eventName', [arg1, arg2]);
-        ```
+   const results = eventEmitter.emit('eventName', [arg1, arg2]);
+   ```
 
 Constraints:
 
